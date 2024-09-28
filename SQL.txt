@@ -1,0 +1,8 @@
+SELECT login
+FROM Couriers
+WHERE inDelivery=true
+
+SELECT tracks,
+       status
+FROM Orders
+WHERE finished==true AND cancelled==true AND inDelivery==true
