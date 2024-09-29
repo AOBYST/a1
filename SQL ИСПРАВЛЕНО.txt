@@ -1,0 +1,13 @@
+SELECT c.login,
+       i.inDelivery
+FROM Orders AS i
+INER JOIN Couriers AS c ON i.id=c.id
+WHERE inDelivery=true
+
+SELECT track
+CASE
+WHEN finished==true, THEN 2
+WHEN cancelled==true, THEN -1
+WHEN inDelivery==true, THEN 1
+END
+FROM Orders
